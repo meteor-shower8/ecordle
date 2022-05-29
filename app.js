@@ -128,8 +128,6 @@ const checkRow = () => {
                             currentTile = 0
                         }
                     }
-                }   
-    }
 }            
 
 const showMessage = (message) => {
