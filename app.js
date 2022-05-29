@@ -111,24 +111,25 @@ const checkRow = () => {
     const guess = guessRows[currentRow].join('')
     console.log('guess', guess)
     if (currentTile > 5) {
-                  console.log('guess is ' + guess, 'wordle is ' +wordle)
-                  flipTile()
-                    if (wordle == guess) {
-                        showMessage('Magnificent!')
-                        isGameOver = true
-                        return
-                    } else {
-                        if (currentRow >= 5) {
-                            isGameOver = true
-                            showMessage('Game Over')
-                            return
-                        }
-                        if (currentRow < 5) {
-                            currentRow++
-                            currentTile = 0
-                        }
-                    }
-}            
+        console.log('guess is ' + guess, 'wordle is ' +wordle)
+        flipTile()
+        if (wordle == guess) {
+            showMessage('Magnificent!')
+            isGameOver = true
+            return
+        } else {
+            if (currentRow >= 5) {
+                isGameOver = true
+                showMessage('Game Over')
+                return
+            }
+            if (currentRow < 5) {
+                currentRow++
+                currentTile = 0
+            }
+        }
+    }
+}
 
 const showMessage = (message) => {
     const messageElement = document.createElement('p')
