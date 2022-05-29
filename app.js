@@ -110,7 +110,6 @@ const deleteLetter = () => {
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
     if (currentTile > 5) {
-        console.log('guess is ' + guess, 'wordle is ' +wordle)
         flipTile()
         if (wordle == guess) {
             showMessage('Magnificent!')
